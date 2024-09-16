@@ -1,3 +1,17 @@
 
+	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8´Ã½ÎŸ2J$1337e7b1-ddcc-4f9d-a514-fbee4d4fdddb
+˜	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç‘±úÿÿÿÿ8¸Ã½ÎŸ2J$5ff9e184-a11c-4ae1-bd91-cae454b11fb0
+Š
+java:S2095k"GUse try-with-resources or close this "Statement" in a "finally" clause.(ö¥ÓÜ8ÏÄ½ÎŸ2J$90f538c5-bd5d-4b17-a469-08775fb60c38
+
+java:S2095g"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŒÄ¶úÿÿÿÿ8ÏÄ½ÎŸ2J$60095c32-f503-4905-9251-68a11f333880
+Ä
+java:S1186P"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚£ıš8ÒÄ½ÎŸ2J$37fd1cb6-70e9-4945-98f3-b0bbe39cd411
+Ã
+java:S1186U"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÓÕ¤V8ÒÄ½ÎŸ2J$dd5d8045-ac09-4e55-a280-4c63eeab134a
+Ê
+java:S1186…"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İ»Æıÿÿÿÿ8ÒÄ½ÎŸ2J$7644ba4b-1062-4d75-abe1-c55d664c0e83
+Å
+java:S1186Š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶òó‰8ÒÄ½ÎŸ2J$ac529488-8bf8-4142-b833-a3c6d2d16797
 ~
-java:S2094"BRemove this empty class, write its code or make it an "interface".(Ó€ÍıJ$fa68d491-878d-463e-9a7a-c3305851f23b
+java:S6437g"6Revoke and change this password, as it is compromised.(ŒÄ¶úÿÿÿÿ8æÄ½ÎŸ2J$ff2b36d0-8621-4d04-b3a8-d5a9cc3d7de1

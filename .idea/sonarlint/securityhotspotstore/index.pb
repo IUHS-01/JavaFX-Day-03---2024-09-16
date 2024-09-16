@@ -13,3 +13,9 @@ U
 %src/main/java/controller/Starter.java,a\9\a94c876d6d72287c96c2404e33b50e70bfe25b89
 J
 src/main/java/Starter.java,6\f\6f5be22b58d98472ba0f5beb4c6019e0bfe502bb
+Q
+!src/main/java/model/Customer.java,d\8\d809aaf69069b4e367322db0008755f08edcc9a2
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
