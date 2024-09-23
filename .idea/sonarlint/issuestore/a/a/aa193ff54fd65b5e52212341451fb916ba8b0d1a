@@ -1,17 +1,35 @@
 
-	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8´Ã½ÎŸ2J$1337e7b1-ddcc-4f9d-a514-fbee4d4fdddb
-˜	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç‘±úÿÿÿÿ8¸Ã½ÎŸ2J$5ff9e184-a11c-4ae1-bd91-cae454b11fb0
-Š
-java:S2095k"GUse try-with-resources or close this "Statement" in a "finally" clause.(ö¥ÓÜ8ÏÄ½ÎŸ2J$90f538c5-bd5d-4b17-a469-08775fb60c38
+	java:S112—"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8†êöé¡2J$736dca76-7182-4d60-98fa-da7bb6578396
+r
+java:S3740 "/Provide the parametrized type for this generic.(´°æ¸8‡êöé¡2J$601436e2-b5a5-4310-a58f-6cb917ab0165
+w
+java:S3740#"/Provide the parametrized type for this generic.(¾±ƒ‡úÿÿÿÿ8‡êöé¡2J$969aa28d-0261-4b60-92cb-fba61abc6767
+w
+java:S3740&"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8‡êöé¡2J$ef842e48-f33c-4170-977d-e3ae16a6973a
+r
+java:S3740)"/Provide the parametrized type for this generic.(Œà•®8‡êöé¡2J$baccdc7b-cdb0-453f-9233-bd89f7143ce3
+r
+java:S3740,"/Provide the parametrized type for this generic.(¨¥8‡êöé¡2J$2f0510df-d8f4-49cc-823d-cf5c135e0428
+q
+java:S3740/"/Provide the parametrized type for this generic.(ş™ÚZ8‡êöé¡2J$ace8feb9-84d3-48b4-85c5-b222962f829f
+w
+java:S37402"/Provide the parametrized type for this generic.(ù‚©·üÿÿÿÿ8‡êöé¡2J$f56f1a85-a5c5-4b41-8170-f3fe55402d0f
+r
+java:S37405"/Provide the parametrized type for this generic.(Úİîô8‡êöé¡2J$7148c90b-f10f-4284-abee-a3af7fd390b0
+™	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç‘±úÿÿÿÿ8‰êöé¡2J$bacb21f5-2698-49b2-a0de-ee1ef3b5b9ff
+‹
+java:S2095‚"GUse try-with-resources or close this "Statement" in a "finally" clause.(ö¥ÓÜ8µêöé¡2J$023569ae-5ebb-49a1-b482-2a4802bb4205
 
-java:S2095g"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŒÄ¶úÿÿÿÿ8ÏÄ½ÎŸ2J$60095c32-f503-4905-9251-68a11f333880
+java:S2095~"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŒÄ¶úÿÿÿÿ8µêöé¡2J$06f6adb8-08bb-441d-ab41-8ec825e36051
 Ä
-java:S1186P"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚£ıš8ÒÄ½ÎŸ2J$37fd1cb6-70e9-4945-98f3-b0bbe39cd411
+java:S1186Y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚£ıš8µêöé¡2J$c8b351bd-e622-4f6a-bbfa-c3bdc86b4428
 Ã
-java:S1186U"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÓÕ¤V8ÒÄ½ÎŸ2J$dd5d8045-ac09-4e55-a280-4c63eeab134a
-Ê
-java:S1186…"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İ»Æıÿÿÿÿ8ÒÄ½ÎŸ2J$7644ba4b-1062-4d75-abe1-c55d664c0e83
-Å
-java:S1186Š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶òó‰8ÒÄ½ÎŸ2J$ac529488-8bf8-4142-b833-a3c6d2d16797
+java:S1186^"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÓÕ¤V8¶êöé¡2J$14ac4c8d-b270-40cf-bcdc-85ad47b2deb6
+É
+java:S1186c"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ú¨óøÿÿÿÿ8²õê¡2J$edb2bc93-3a9f-4f3a-b12a-5d9f511fbf68
+É
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İ»Æıÿÿÿÿ8¶êöé¡2J$02a6dd2e-9ce1-48b7-bf9b-5508fc0f7dec
+Ä
+java:S1186m"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶òó‰8·êöé¡2J$70171e50-4637-45d6-bc1a-5756a1b171e3
 ~
-java:S6437g"6Revoke and change this password, as it is compromised.(ŒÄ¶úÿÿÿÿ8æÄ½ÎŸ2J$ff2b36d0-8621-4d04-b3a8-d5a9cc3d7de1
+java:S6437~"6Revoke and change this password, as it is compromised.(ŒÄ¶úÿÿÿÿ8Áêöé¡2J$c6401c8e-d443-4af6-9c68-d924bf663fed

@@ -6,18 +6,21 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Customer;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class CustomerFormController {
+public class CustomerFormController implements Initializable {
 
     @FXML
     private TableColumn<?, ?> colDob;
@@ -26,28 +29,28 @@ public class CustomerFormController {
     private JFXComboBox<?> cmbTitle;
 
     @FXML
-    private TableColumn<?, ?> colAddress;
+    private TableColumn colAddress;
 
     @FXML
-    private TableColumn<?, ?> colCity;
+    private TableColumn colCity;
 
     @FXML
-    private TableColumn<?, ?> colId;
+    private TableColumn colId;
 
     @FXML
-    private TableColumn<?, ?> colName;
+    private TableColumn colName;
 
     @FXML
-    private TableColumn<?, ?> colPostalCode;
+    private TableColumn colPostalCode;
 
     @FXML
-    private TableColumn<?, ?> colProvince;
+    private TableColumn colProvince;
 
     @FXML
-    private TableColumn<?, ?> colSalary;
+    private TableColumn colSalary;
 
     @FXML
-    private TableColumn<?, ?> colTitle;
+    private TableColumn colTitle;
 
     @FXML
     private DatePicker dateDob;
@@ -76,6 +79,12 @@ public class CustomerFormController {
     @FXML
     private JFXTextField txtSalary;
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadTable();
+    }
+
     @FXML
     void btnAddOnAction(ActionEvent event) {
 
@@ -88,6 +97,20 @@ public class CustomerFormController {
 
     @FXML
     void btnReloadOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnSearchOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnUpdateOnAction(ActionEvent event) {
+
+    }
+
+    private void loadTable() {
         ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
 
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -102,11 +125,11 @@ public class CustomerFormController {
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/thogakade", "root", "1234");
 
-            String SQL ="SELECT * FROM customer";
+            String SQL = "SELECT * FROM customer";
 
             ResultSet resultSet = connection.createStatement().executeQuery(SQL);
 
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Customer customer = new Customer(
                         resultSet.getString("CustID"),
                         resultSet.getString("CustTitle"),
@@ -129,14 +152,5 @@ public class CustomerFormController {
         }
     }
 
-    @FXML
-    void btnSearchOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void btnUpdateOnAction(ActionEvent event) {
-
-    }
 
 }
