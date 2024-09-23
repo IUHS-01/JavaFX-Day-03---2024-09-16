@@ -18,6 +18,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class CustomerFormController implements Initializable {
@@ -26,7 +27,7 @@ public class CustomerFormController implements Initializable {
     private TableColumn<?, ?> colDob;
 
     @FXML
-    private JFXComboBox<?> cmbTitle;
+    private JFXComboBox <String> cmbTitle;
 
     @FXML
     private TableColumn colAddress;
@@ -82,11 +83,31 @@ public class CustomerFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<String> customerTitleList = FXCollections.observableArrayList();
+        customerTitleList.add("Mr");
+        customerTitleList.add("Mrs");
+        customerTitleList.add("Miss");
+        customerTitleList.add("Ms");
+        cmbTitle.setItems(customerTitleList);
         loadTable();
     }
 
     @FXML
     void btnAddOnAction(ActionEvent event) {
+
+        Customer customer = new Customer(
+                txtCustomerId.getText(),
+                cmbTitle.getValue(),
+                txtName.getText(),
+                dateDob.getValue(),
+                Double.parseDouble(txtSalary.getText()),
+                txtAddress.getText(),
+                txtCity.getText(),
+                txtProvince.getText(),
+                txtPostalCode.getText()
+        );
+
+        System.out.println(customer);
 
     }
 

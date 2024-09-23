@@ -1,35 +1,36 @@
 
-	java:S112—"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8†êöé¡2J$736dca76-7182-4d60-98fa-da7bb6578396
+	java:S112¬"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8½Ø¯ë¡2J$1326800a-2ab4-4729-b094-ce3d82a774b4
 r
-java:S3740 "/Provide the parametrized type for this generic.(´°æ¸8‡êöé¡2J$601436e2-b5a5-4310-a58f-6cb917ab0165
+java:S3740!"/Provide the parametrized type for this generic.(´°æ¸8¾Ø¯ë¡2J$d476e77f-854b-434e-ab0a-7b402af2f48b
 w
-java:S3740#"/Provide the parametrized type for this generic.(¾±ƒ‡úÿÿÿÿ8‡êöé¡2J$969aa28d-0261-4b60-92cb-fba61abc6767
+java:S3740$"/Provide the parametrized type for this generic.(¾±ƒ‡úÿÿÿÿ8¿Ø¯ë¡2J$1eafa1f5-b925-4e24-9854-8e44455aaa6c
 w
-java:S3740&"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8‡êöé¡2J$ef842e48-f33c-4170-977d-e3ae16a6973a
+java:S3740'"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8¿Ø¯ë¡2J$f12a5724-2e1f-4ac5-bd09-b636c9483fa7
 r
-java:S3740)"/Provide the parametrized type for this generic.(Œà•®8‡êöé¡2J$baccdc7b-cdb0-453f-9233-bd89f7143ce3
+java:S3740*"/Provide the parametrized type for this generic.(Œà•®8¿Ø¯ë¡2J$d41e6796-6526-4941-ab2e-a8548e3df83f
 r
-java:S3740,"/Provide the parametrized type for this generic.(¨¥8‡êöé¡2J$2f0510df-d8f4-49cc-823d-cf5c135e0428
+java:S3740-"/Provide the parametrized type for this generic.(¨¥8¿Ø¯ë¡2J$104b45b0-0b94-4094-a0d2-bd795e9169ef
 q
-java:S3740/"/Provide the parametrized type for this generic.(ş™ÚZ8‡êöé¡2J$ace8feb9-84d3-48b4-85c5-b222962f829f
+java:S37400"/Provide the parametrized type for this generic.(ş™ÚZ8¿Ø¯ë¡2J$851df9ec-02be-4fb4-93ff-bb9adda5c115
 w
-java:S37402"/Provide the parametrized type for this generic.(ù‚©·üÿÿÿÿ8‡êöé¡2J$f56f1a85-a5c5-4b41-8170-f3fe55402d0f
+java:S37403"/Provide the parametrized type for this generic.(ù‚©·üÿÿÿÿ8¿Ø¯ë¡2J$f9e082f4-37c7-41ca-9501-df23c7de9260
 r
-java:S37405"/Provide the parametrized type for this generic.(Úİîô8‡êöé¡2J$7148c90b-f10f-4284-abee-a3af7fd390b0
-™	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç‘±úÿÿÿÿ8‰êöé¡2J$bacb21f5-2698-49b2-a0de-ee1ef3b5b9ff
+java:S37406"/Provide the parametrized type for this generic.(Úİîô8¿Ø¯ë¡2J$8ce7a674-9842-4108-acaf-f26f1bb33d0c
+™	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç‘±úÿÿÿÿ8ÁØ¯ë¡2J$5651f356-8a63-4adf-b430-f92abb7f3d86
 ‹
-java:S2095‚"GUse try-with-resources or close this "Statement" in a "finally" clause.(ö¥ÓÜ8µêöé¡2J$023569ae-5ebb-49a1-b482-2a4802bb4205
-
-java:S2095~"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŒÄ¶úÿÿÿÿ8µêöé¡2J$06f6adb8-08bb-441d-ab41-8ec825e36051
-Ä
-java:S1186Y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚£ıš8µêöé¡2J$c8b351bd-e622-4f6a-bbfa-c3bdc86b4428
+java:S2095—"GUse try-with-resources or close this "Statement" in a "finally" clause.(ö¥ÓÜ8Ê¢Èë¡2J$4738cd1a-9700-4673-82e0-7db096518536
+‘
+java:S2095“"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŒÄ¶úÿÿÿÿ8Ê¢Èë¡2J$a3d3a5c7-0529-47e3-ac85-7b0c8c2888de
 Ã
-java:S1186^"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÓÕ¤V8¶êöé¡2J$14ac4c8d-b270-40cf-bcdc-85ad47b2deb6
+java:S1186s"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÓÕ¤V8Ë¢Èë¡2J$e4b31476-bd08-48e0-873a-6ae57c4d8b04
 É
-java:S1186c"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ú¨óøÿÿÿÿ8²õê¡2J$edb2bc93-3a9f-4f3a-b12a-5d9f511fbf68
+java:S1186x"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ú¨óøÿÿÿÿ8Ë¢Èë¡2J$e3880033-2315-4eb5-9743-462384a223af
 É
-java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İ»Æıÿÿÿÿ8¶êöé¡2J$02a6dd2e-9ce1-48b7-bf9b-5508fc0f7dec
-Ä
-java:S1186m"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶òó‰8·êöé¡2J$70171e50-4637-45d6-bc1a-5756a1b171e3
-~
-java:S6437~"6Revoke and change this password, as it is compromised.(ŒÄ¶úÿÿÿÿ8Áêöé¡2J$c6401c8e-d443-4af6-9c68-d924bf663fed
+java:S1186}"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İ»Æıÿÿÿÿ8Ë¢Èë¡2J$5ad1c0e0-43e5-480e-a54e-e2ef51ff49cd
+Å
+java:S1186‚"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶òó‰8Ë¢Èë¡2J$9eb1baf0-f809-483e-91cd-ee0d775e09c4
+m	java:S106n"+Replace this use of System.out by a logger.(ê¾ú®8Õ¢Èë¡2J$b5140269-64d8-4c4a-98df-09300ce77021
+
+java:S6437“"6Revoke and change this password, as it is compromised.(ŒÄ¶úÿÿÿÿ8Ù¢Èë¡2J$bdbfd481-cd07-4937-bb2a-652fb64549c8
+x
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8ê³Ìë¡2J$f1fd1567-4884-4d71-b13c-39499bd7dc0e
