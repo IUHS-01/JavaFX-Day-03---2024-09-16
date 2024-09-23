@@ -88,6 +88,24 @@ public class CustomerFormController implements Initializable {
         customerTitleList.add("Ms");
         cmbTitle.setItems(customerTitleList);
         loadTable();
+
+        tblCustomers.getSelectionModel().selectedItemProperty().addListener((observableValue, customer, newValue) -> {
+            if (newValue!=null){
+                setValueToText(newValue);
+            }
+        });
+    }
+
+    private void setValueToText(Customer newValue) {
+        txtCustomerId.setText(newValue.getId());
+        txtName.setText(newValue.getName());
+        cmbTitle.setValue(newValue.getTitle());
+        txtProvince.setText(newValue.getProvince());
+        txtPostalCode.setText(newValue.getPostalCode());
+        txtSalary.setText(newValue.getSalary().toString());
+        dateDob.setValue(newValue.getDob());
+        txtAddress.setText(newValue.getAddress());
+        txtCity.setText(newValue.getCity());
     }
 
     @FXML
