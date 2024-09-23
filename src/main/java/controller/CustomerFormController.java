@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -14,10 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.Customer;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
@@ -106,6 +104,29 @@ public class CustomerFormController implements Initializable {
                 txtProvince.getText(),
                 txtPostalCode.getText()
         );
+
+        String SQL = "INSERT INTO customer VALUES(?,?,?,?,?,?,?,?,?)";
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/thogakade","root","1234");
+            PreparedStatement psTm = connection.prepareStatement(SQL);
+            psTm.setObject(1,customer.getId());
+            psTm.setObject(2,customer.getTitle());
+            psTm.setObject(3,customer.getName());
+            psTm.setObject(4,customer.getDob());
+            psTm.setObject(5,customer.getSalary());
+            psTm.setObject(6,customer.getAddress());
+            psTm.setObject(7,customer.getCity());
+            psTm.setObject(8,customer.getProvince());
+            psTm.setObject(9,customer.getPostalCode());
+           boolean isCustomerAdd = psTm.executeUpdate()>0;
+           if (isCustomerAdd){
+               new Alert(Alert.AlertType.INFORMATION,"Customer Added :)").show();
+               loadTable();
+           }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR,"Customer Not Added :(").show();
+        }
 
         System.out.println(customer);
 
