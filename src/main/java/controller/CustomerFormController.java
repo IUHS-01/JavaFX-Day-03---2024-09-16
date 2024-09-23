@@ -2,6 +2,7 @@ package controller;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -95,7 +96,6 @@ public class CustomerFormController implements Initializable {
             }
         });
     }
-
     private void setValueToText(Customer newValue) {
         txtCustomerId.setText(newValue.getId());
         txtName.setText(newValue.getName());
@@ -107,7 +107,6 @@ public class CustomerFormController implements Initializable {
         txtAddress.setText(newValue.getAddress());
         txtCity.setText(newValue.getCity());
     }
-
     @FXML
     void btnAddOnAction(ActionEvent event) {
 
@@ -126,7 +125,7 @@ public class CustomerFormController implements Initializable {
         String SQL = "INSERT INTO customer VALUES(?,?,?,?,?,?,?,?,?)";
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/thogakade","root","1234");
+            Connection connection = DBConnection.getInstance().getConnection();
             PreparedStatement psTm = connection.prepareStatement(SQL);
             psTm.setObject(1,customer.getId());
             psTm.setObject(2,customer.getTitle());
@@ -152,7 +151,17 @@ public class CustomerFormController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-
+        String SQL = "DELETE FROM customer WHERE CustID= '"+txtCustomerId.getText()+"'";
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            Boolean isDeleted = connection.createStatement().executeUpdate(SQL)>0;
+            if (isDeleted){
+                new Alert(Alert.AlertType.INFORMATION,""+txtCustomerId.getText()+": Customer Deleted !!").show();
+                loadTable();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.INFORMATION,""+txtCustomerId.getText()+": Customer Deleted !!").show();
+        }
     }
 
     @FXML
@@ -162,12 +171,69 @@ public class CustomerFormController implements Initializable {
 
     @FXML
     void btnSearchOnAction(ActionEvent event) {
+        String SQL = "SELECT * FROM customer WHERE CustID=?";
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
 
+            PreparedStatement psTm = connection.prepareStatement(SQL);
+            psTm.setObject(1,txtCustomerId.getText());
+            ResultSet resultSet = psTm.executeQuery();
+            resultSet.next();
+            setValueToText(new Customer(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getDate(4).toLocalDate(),
+                    resultSet.getDouble(5),
+                    resultSet.getString(6),
+                    resultSet.getString(7),
+                    resultSet.getString(8),
+                    resultSet.getString(9)
+            ));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
 
+        Customer customer = new Customer(
+                txtCustomerId.getText(),
+                cmbTitle.getValue(),
+                txtName.getText(),
+                dateDob.getValue(),
+                Double.parseDouble(txtSalary.getText()),
+                txtAddress.getText(),
+                txtCity.getText(),
+                txtProvince.getText(),
+                txtPostalCode.getText()
+        );
+
+        String SQl = "Update customer SET CustName=?, CustTitle=?, DOB=?,  salary=?,  CustAddress=?, City=?, Province=?, PostalCode=? WHERE CustID=?";
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            PreparedStatement psTm = connection.prepareStatement(SQl);
+            psTm.setObject(1,customer.getName());
+            psTm.setObject(2,customer.getTitle());
+            psTm.setObject(3,customer.getDob());
+            psTm.setObject(4,customer.getSalary());
+            psTm.setObject(5,customer.getAddress());
+            psTm.setObject(6,customer.getCity());
+            psTm.setObject(7,customer.getProvince());
+            psTm.setObject(8,customer.getPostalCode());
+            psTm.setObject(9,customer.getId());
+            Boolean isUpdated = psTm.executeUpdate()>0;
+
+            if (isUpdated){
+                new Alert(Alert.AlertType.INFORMATION,"Customer Updated!").show();
+                loadTable();
+            }
+
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR,"Customer Not Updated!").show();
+            throw new RuntimeException(e);
+        }
     }
 
     private void loadTable() {
@@ -183,7 +249,8 @@ public class CustomerFormController implements Initializable {
         colPostalCode.setCellValueFactory(new PropertyValueFactory<>("postalCode"));
         colProvince.setCellValueFactory(new PropertyValueFactory<>("province"));
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/thogakade", "root", "1234");
+
+            Connection connection = DBConnection.getInstance().getConnection();
 
             String SQL = "SELECT * FROM customer";
 
