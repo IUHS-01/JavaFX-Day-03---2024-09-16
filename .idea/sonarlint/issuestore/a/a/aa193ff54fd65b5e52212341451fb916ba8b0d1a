@@ -1,42 +1,34 @@
 
-	java:S112Ã"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Èùí‰¤2J$61089503-820e-4e23-9e03-38ebfd22674f
-	java:S112ì"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Éùí‰¤2J$78335e8a-4909-409e-bf72-6bda0631cbef
-	java:S112—"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Éùí‰¤2J$f8ce2d57-4525-44c2-abe1-236e035441f8
+	java:S112½"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¬§ÓŠ¤2J$5370f024-8da2-4d31-8bdf-99a3eb81493b
+	java:S112æ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8­§ÓŠ¤2J$b21a55ab-7037-4842-a288-e280562a4281
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8®§ÓŠ¤2J$ead1ce65-e07a-4c37-9486-275cd759ec06
 r
-java:S3740!"/Provide the parametrized type for this generic.(´°æ¸8Êùí‰¤2J$f9757c2f-59ea-41c6-ab29-ceb6fc9a2a11
+java:S3740 "/Provide the parametrized type for this generic.(´°æ¸8®§ÓŠ¤2J$aad5fe78-b02e-44b1-8894-6bc4df5a184e
 w
-java:S3740$"/Provide the parametrized type for this generic.(¾±ƒ‡úÿÿÿÿ8Êùí‰¤2J$7b7eb784-3950-40da-a02c-92f1f9186b86
+java:S3740#"/Provide the parametrized type for this generic.(¾±ƒ‡úÿÿÿÿ8®§ÓŠ¤2J$fed70472-cea4-4c3b-9914-64dce1603c89
 w
-java:S3740'"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8Êùí‰¤2J$26bc797f-750f-4eae-8524-fa43f3744925
+java:S3740&"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8®§ÓŠ¤2J$66512b66-117b-4275-95f3-d264ddf80be9
 r
-java:S3740*"/Provide the parametrized type for this generic.(Œà•®8Êùí‰¤2J$2319fb68-d3bb-4e08-b39c-a6fee867fa2a
+java:S3740)"/Provide the parametrized type for this generic.(Œà•®8¯§ÓŠ¤2J$9dd38565-6f3c-4682-9451-333b506d8351
 r
-java:S3740-"/Provide the parametrized type for this generic.(¨¥8Êùí‰¤2J$daf9912f-aafe-4767-bffb-5d04af9d7538
+java:S3740,"/Provide the parametrized type for this generic.(¨¥8¯§ÓŠ¤2J$b3ea0ad2-bb32-4c39-a746-83c018a54b8b
 q
-java:S37400"/Provide the parametrized type for this generic.(ş™ÚZ8Êùí‰¤2J$bfcb3396-3f17-4212-bd4b-7efeaf8ca0e1
+java:S3740/"/Provide the parametrized type for this generic.(ş™ÚZ8¯§ÓŠ¤2J$5cfe0ba6-4e94-41d2-bf84-0bffe3ebe73d
 w
-java:S37403"/Provide the parametrized type for this generic.(ù‚©·üÿÿÿÿ8Êùí‰¤2J$b96e44fc-5f68-4016-944f-e5a9a2730260
+java:S37402"/Provide the parametrized type for this generic.(ù‚©·üÿÿÿÿ8¯§ÓŠ¤2J$4d0bed7a-9d47-443c-a24a-dd0a4bba02b7
 r
-java:S37406"/Provide the parametrized type for this generic.(Úİîô8Ëùí‰¤2J$987680f2-0a36-4478-bd60-679cbbf801bf
-“	java:S117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Ş—Á8Îùí‰¤2J$93f407e0-ed46-42d3-a06e-23e3a3442138
-™	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ÑÑ·ûÿÿÿÿ8Ïùí‰¤2J$653c406c-9f3f-48ed-a22c-578db964b1c0
-™	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÛçÎøÿÿÿÿ8Ïùí‰¤2J$28e6f68f-22d6-47c8-b62c-b1b9bd3faa82
-”	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÍ’8Ïùí‰¤2J$03fa18c5-986c-46f2-85e7-04d9d179f94d
-™	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç‘±úÿÿÿÿ8Ïùí‰¤2J$4338207f-0a60-4255-b904-d44be6481f4d
+java:S37405"/Provide the parametrized type for this generic.(Úİîô8¯§ÓŠ¤2J$49ca1ee9-845a-4a39-9a30-463c2deb69fc
+“	java:S117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Ş—Á8°§ÓŠ¤2J$72e38454-3e50-429c-8efb-cb3ded856301
+“	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢½–8°§ÓŠ¤2J$9fc64a7b-db0e-4c8a-9fef-9f2c13a85a43
+™	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÛçÎøÿÿÿÿ8°§ÓŠ¤2J$6dacfca6-7a15-4434-9c90-eed93a23a271
+”	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÍ’8°§ÓŠ¤2J$1848ae8d-203c-4b07-b374-4870b6a88398
+™	java:S117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç‘±úÿÿÿÿ8°§ÓŠ¤2J$b24e7b63-8c73-46c2-96a9-82685f671ca8
 q
-java:S5411Ÿ"(Use a primitive boolean expression here.(éÕ™Èùÿÿÿÿ8Ñùí‰¤2J$b517fc39-b4fe-4a39-9777-5145e3443250
+java:S5411"(Use a primitive boolean expression here.(éÕ™Èùÿÿÿÿ8²§ÓŠ¤2J$5072faef-310a-4003-8885-9e7eb82845aa
 q
-java:S5411å"(Use a primitive boolean expression here.(ò…¢½üÿÿÿÿ8Ñùí‰¤2J$aac8b588-fea2-4cb0-aab8-e501dc237c3f
-“
-java:S2095³"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÒÄã÷8–úí‰¤2J$6c80c1f6-6201-42cb-bf90-4abc3c170aad
-Š
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜­a8–úí‰¤2J$f848e754-1de3-4fe5-bf94-42b5738e4c32
-‹
-java:S2095‚"GUse try-with-resources or close this "Statement" in a "finally" clause.(ö¥ÓÜ8–úí‰¤2J$1865fa0c-843d-4909-bb7c-6d17bc403aa0
-’
-java:S2095Ù"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(›øH8–úí‰¤2J$71f6c957-188c-4cb8-931b-0e5a00764323
+java:S5411ß"(Use a primitive boolean expression here.(ò…¢½üÿÿÿÿ8²§ÓŠ¤2J$70e1218e-4944-42aa-987a-9798548bdbd9
 Ê
-java:S1186©"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ú¨óøÿÿÿÿ8˜úí‰¤2J$1daffcd5-6855-4257-8d0a-d16a13f06aa1
-n	java:S106•"+Replace this use of System.out by a logger.(ê¾ú®8¦úí‰¤2J$a487aec9-030c-465f-9999-44bf4e3aa142
-R
-java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8ºÌó‰¤2
+java:S1186§"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ú¨óøÿÿÿÿ8­¨ÓŠ¤2J$2d97c531-639b-488d-a9cc-071538b5540a
+n	java:S106”"+Replace this use of System.out by a logger.(ê¾ú®8ä¨ÓŠ¤2J$b227e246-4d13-461d-91e7-a23176ffea9d
+o
+java:S1128",Remove this unused import 'db.DBConnection'.(Šùà†8·©ÓŠ¤2J$2ac36dc4-104e-4cba-bb42-47b7aadbe793
