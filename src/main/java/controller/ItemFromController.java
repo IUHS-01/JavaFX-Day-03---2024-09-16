@@ -139,12 +139,33 @@ public class ItemFromController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-
+        String SQl = "DELETE FROM item WHERE ItemCode=?";
+        try {
+            if (CrudUtil.execute(SQl, txtItemCode.getText())) {
+                new Alert(Alert.AlertType.INFORMATION, txtItemCode.getText() + " Item Deleted").show();
+                loadTable();
+            } else {
+                new Alert(Alert.AlertType.ERROR, txtItemCode.getText() + " Item Not Deleted").show();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
-    void btnSearchOnAction(ActionEvent event) {
-
+    void btnSearchOnAction(ActionEvent event) throws SQLException {
+        String SQL = "SELECT * FROM item WHERE ItemCode=?";
+        ResultSet resultSet = CrudUtil.execute(SQL, txtItemCode.getText());
+        resultSet.next();
+        setValueToText(
+                new Item(
+                        resultSet.getString(1),
+                        resultSet.getString(2),
+                        resultSet.getString(3),
+                        resultSet.getDouble(4),
+                        resultSet.getInt(5)
+                )
+        );
     }
 
     @FXML
@@ -169,10 +190,10 @@ public class ItemFromController implements Initializable {
                             item.getItemCode()
                     )
             ) {
-                new Alert(Alert.AlertType.INFORMATION,"Item Updated!").show();
+                new Alert(Alert.AlertType.INFORMATION, "Item Updated!").show();
                 loadTable();
-            }else{
-                new Alert(Alert.AlertType.ERROR,"Item Not Updated ! ").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item Not Updated ! ").show();
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
