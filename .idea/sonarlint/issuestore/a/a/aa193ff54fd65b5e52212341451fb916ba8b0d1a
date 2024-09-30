@@ -27,16 +27,16 @@ q
 java:S5411"(Use a primitive boolean expression here.(éÕ™Èùÿÿÿÿ8‚Ø±î¡2J$5dae383c-1f34-4031-adb4-01434a6f31cd
 q
 java:S5411ä"(Use a primitive boolean expression here.(ò…¢½üÿÿÿÿ8ƒØ±î¡2J$53c990f8-e5aa-44ed-8b48-91935e9fe130
-Š
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜­a8ªØ±î¡2J$a14e28ad-038a-4be1-8917-5ceff7f3ac40
-“
-java:S2095²"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÒÄã÷8ªØ±î¡2J$555b558d-6d7d-4920-a92e-4f45b6aa5461
-“
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÒÄã÷8ªØ±î¡2J$08c32ffb-d357-465a-8e84-326f865bc19e
-’
-java:S2095Ø"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(›øH8ªØ±î¡2J$aa367a09-bb68-4ce4-a06c-60f644341878
 ‹
 java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ö¥ÓÜ8ªØ±î¡2J$070edf5e-bf80-42f5-aa53-30717341224a
+“
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÒÄã÷8ªØ±î¡2J$08c32ffb-d357-465a-8e84-326f865bc19e
+“
+java:S2095²"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÒÄã÷8ªØ±î¡2J$555b558d-6d7d-4920-a92e-4f45b6aa5461
+’
+java:S2095Ø"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(›øH8ªØ±î¡2J$aa367a09-bb68-4ce4-a06c-60f644341878
+Š
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜­a8ªØ±î¡2J$a14e28ad-038a-4be1-8917-5ceff7f3ac40
 Ê
 java:S1186¨"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ú¨óøÿÿÿÿ8«Ø±î¡2J$679f57cd-0f8f-4d20-a175-601510c80d27
 n	java:S106”"+Replace this use of System.out by a logger.(ê¾ú®8³Ø±î¡2J$76eb51dd-85d6-419e-a5c8-038d4de51cce

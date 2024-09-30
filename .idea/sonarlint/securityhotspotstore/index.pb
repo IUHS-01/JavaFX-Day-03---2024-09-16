@@ -15,3 +15,5 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 R
 "src/main/java/db/DBConnection.java,f\d\fd7336f68247f5ace91042607378ff616e4285dd
+P
+ src/main/java/util/CrudUtil.java,8\f\8fb6a1a4f8f86f63483861f210d7e438e2de6987
