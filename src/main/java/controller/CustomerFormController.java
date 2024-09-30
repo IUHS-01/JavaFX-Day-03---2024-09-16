@@ -14,6 +14,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Customer;
+import util.CrudUtil;
 
 import java.net.URL;
 import java.sql.*;
@@ -125,18 +126,18 @@ public class CustomerFormController implements Initializable {
         String SQL = "INSERT INTO customer VALUES(?,?,?,?,?,?,?,?,?)";
 
         try {
-            Connection connection = DBConnection.getInstance().getConnection();
-            PreparedStatement psTm = connection.prepareStatement(SQL);
-            psTm.setObject(1,customer.getId());
-            psTm.setObject(2,customer.getTitle());
-            psTm.setObject(3,customer.getName());
-            psTm.setObject(4,customer.getDob());
-            psTm.setObject(5,customer.getSalary());
-            psTm.setObject(6,customer.getAddress());
-            psTm.setObject(7,customer.getCity());
-            psTm.setObject(8,customer.getProvince());
-            psTm.setObject(9,customer.getPostalCode());
-           boolean isCustomerAdd = psTm.executeUpdate()>0;
+           boolean isCustomerAdd = CrudUtil.execute(
+                   SQL,
+                   customer.getId(),
+                   customer.getTitle(),
+                   customer.getName(),
+                   customer.getDob(),
+                   customer.getSalary(),
+                   customer.getAddress(),
+                   customer.getCity(),
+                   customer.getProvince(),
+                   customer.getPostalCode()
+           );
            if (isCustomerAdd){
                new Alert(Alert.AlertType.INFORMATION,"Customer Added :)").show();
                loadTable();
