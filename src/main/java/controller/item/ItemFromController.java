@@ -53,6 +53,8 @@ public class ItemFromController implements Initializable {
     @FXML
     private JFXTextField txtUnitPrice;
 
+    ItemService itemController = new ItemController();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         colItemCode.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
@@ -105,8 +107,6 @@ public class ItemFromController implements Initializable {
 
     @FXML
     void btnAddOnAction(ActionEvent event) {
-        String SQl = "INSERT INTO item VALUES(?,?,?,?,?)";
-
         Item item = new Item(
                 txtItemCode.getText(),
                 txtDescription.getText(),
@@ -114,27 +114,13 @@ public class ItemFromController implements Initializable {
                 Double.parseDouble(txtUnitPrice.getText()),
                 Integer.parseInt(txtQty.getText())
         );
-
-        try {
-            Boolean isAdd = CrudUtil.execute(
-                    SQl,
-                    item.getItemCode(),
-                    item.getDescription(),
-                    item.getPackSize(),
-                    item.getUnitPrice(),
-                    item.getQty()
-            );
-            if (isAdd) {
-                new Alert(Alert.AlertType.INFORMATION, "Item Added!!").show();
-                loadTable();
-            } else {
-                new Alert(Alert.AlertType.ERROR, "Item Not Added!!").show();
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        Boolean isAdd = itemController.addItem(item);
+        if (isAdd) {
+            new Alert(Alert.AlertType.INFORMATION, "Item Added!!").show();
+            loadTable();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Item Not Added!!").show();
         }
-
     }
 
     @FXML
