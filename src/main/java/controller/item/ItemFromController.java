@@ -81,28 +81,8 @@ public class ItemFromController implements Initializable {
     }
 
     private void loadTable() {
-        String SQL = "SELECT * FROM item";
-
-        ObservableList<Item> items = FXCollections.observableArrayList();
-
-        try {
-            ResultSet resultSet = CrudUtil.execute(SQL);
-
-            while (resultSet.next()) {
-                items.add(new Item(
-                        resultSet.getString(1),
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getDouble(4),
-                        resultSet.getInt(5)
-                ));
-            }
-
-            tblItems.setItems(items);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        ObservableList<Item> items = itemController.getAllItem();
+        tblItems.setItems(items);
     }
 
     @FXML
