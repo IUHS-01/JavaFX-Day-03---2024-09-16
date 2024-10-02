@@ -101,4 +101,15 @@ public class ItemController implements ItemService {
             throw new RuntimeException(e);
         }
     }
+
+    public ObservableList<String> getItemCode(){
+        ObservableList<Item> allItem = getAllItem();
+        ObservableList<String> itemCodes = FXCollections.observableArrayList();
+
+        allItem.forEach(item -> {
+            itemCodes.add(item.getItemCode());
+        });
+
+        return itemCodes;
+    }
 }

@@ -3,6 +3,7 @@ package controller;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import controller.customer.CustomerController;
+import controller.item.ItemController;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -14,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.util.Duration;
+import model.Item;
 
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -27,7 +29,7 @@ public class PlaceOrderFromController implements Initializable {
     private JFXComboBox<String> cmbCustomerId;
 
     @FXML
-    private JFXComboBox<?> cmbItemCode;
+    private JFXComboBox<String> cmbItemCode;
 
     @FXML
     private TableColumn<?, ?> colDescription;
@@ -82,8 +84,13 @@ public class PlaceOrderFromController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newValue) -> {
+            loadItemData(newValue);
+        });
+
         loadDateAndTime();
         loadCustomerIds();
+        loadItemCodes();
     }
 
     @FXML
@@ -121,6 +128,18 @@ public class PlaceOrderFromController implements Initializable {
     private void loadCustomerIds(){
         cmbCustomerId.setItems(new CustomerController().getCustomerIds());
     }
+    private void loadItemCodes(){
+        cmbItemCode.setItems(new ItemController().getItemCode());
+    }
+
+    private void loadItemData(String itemCode){
+        Item item = new ItemController().searchItem(itemCode);
+
+        txtDescription.setText(item.getDescription());
+        txtStock.setText(item.getQty().toString());
+        txtUnitPrice.setText(item.getUnitPrice().toString());
+    }
+
 
 
 }
