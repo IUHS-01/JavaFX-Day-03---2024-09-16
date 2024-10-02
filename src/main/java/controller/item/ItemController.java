@@ -2,18 +2,19 @@ package controller.item;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
 import model.Item;
 import util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ItemController implements ItemService{
+public class ItemController implements ItemService {
     @Override
     public boolean addItem(Item item) {
         String SQl = "INSERT INTO item VALUES(?,?,?,?,?)";
         try {
-           return CrudUtil.execute(
+            return CrudUtil.execute(
                     SQl,
                     item.getItemCode(),
                     item.getDescription(),
@@ -29,17 +30,53 @@ public class ItemController implements ItemService{
 
     @Override
     public boolean updateItem(Item item) {
-        return false;
+        String SQL = "UPDATE item SET Description=?, PackSize=?, UnitPrice=?, QtyOnHand=? WHERE ItemCode=?";
+        try {
+         return CrudUtil.execute(SQL,
+                    item.getDescription(),
+                    item.getPackSize(),
+                    item.getUnitPrice(),
+                    item.getQty(),
+                    item.getItemCode()
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Override
     public Item searchItem(String itemCode) {
-        return null;
+        String SQL = "SELECT * FROM item WHERE ItemCode=?";
+        ResultSet resultSet = null;
+        try {
+            resultSet = CrudUtil.execute(SQL, itemCode);
+            resultSet.next();
+            return new Item(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getDouble(4),
+                    resultSet.getInt(5)
+            );
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 
     @Override
     public boolean deleteItem(String itemCode) {
-        return false;
+        String SQl = "DELETE FROM item WHERE ItemCode=?";
+        try {
+          return CrudUtil.execute(SQl, itemCode);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 
     @Override
