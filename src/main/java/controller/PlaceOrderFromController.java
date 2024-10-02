@@ -7,6 +7,7 @@ import controller.item.ItemController;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +15,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
+import model.CartTM;
 import model.Customer;
 import model.Item;
 
@@ -57,7 +60,7 @@ public class PlaceOrderFromController implements Initializable {
     private Label lblTime;
 
     @FXML
-    private TableView<?> tblCart;
+    private TableView<CartTM> tblCart;
 
     @FXML
     private JFXTextField txtCity;
@@ -85,6 +88,12 @@ public class PlaceOrderFromController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        colItemCode.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
+        colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
+        colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        colUnitPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
+        colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
+
         cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newValue) -> {
             loadItemData(newValue);
         });
@@ -98,9 +107,25 @@ public class PlaceOrderFromController implements Initializable {
         loadItemCodes();
     }
 
+    ObservableList<CartTM> cart = FXCollections.observableArrayList();
+
     @FXML
     void btnAddToCartOnAction(ActionEvent event) {
+        Double unitPrice = Double.parseDouble(txtUnitPrice.getText());
+        Integer qty = Integer.parseInt(txtQty.getText());
 
+        Double total = unitPrice * qty;
+        cart.add(
+                new CartTM(
+                        cmbItemCode.getValue(),
+                        txtDescription.getText(),
+                        qty,
+                        unitPrice,
+                        total
+                )
+        );
+        tblCart.setItems(cart);
+        calcNetTotal();
     }
 
     @FXML
@@ -130,14 +155,15 @@ public class PlaceOrderFromController implements Initializable {
 
     }
 
-    private void loadCustomerIds(){
+    private void loadCustomerIds() {
         cmbCustomerId.setItems(new CustomerController().getCustomerIds());
     }
-    private void loadItemCodes(){
+
+    private void loadItemCodes() {
         cmbItemCode.setItems(new ItemController().getItemCode());
     }
 
-    private void loadItemData(String itemCode){
+    private void loadItemData(String itemCode) {
         Item item = new ItemController().searchItem(itemCode);
 
         txtDescription.setText(item.getDescription());
@@ -145,7 +171,7 @@ public class PlaceOrderFromController implements Initializable {
         txtUnitPrice.setText(item.getUnitPrice().toString());
     }
 
-    private void loadCustomerData(String customerId){
+    private void loadCustomerData(String customerId) {
         Customer customer = new CustomerController().searchCustomer(customerId);
 
         txtName.setText(customer.getName());
@@ -153,6 +179,18 @@ public class PlaceOrderFromController implements Initializable {
         txtSalary.setText(customer.getSalary().toString());
     }
 
+
+    private void calcNetTotal() {
+        Double total = 0.0;
+
+        for (CartTM cartTM : cart) {
+            total += cartTM.getTotal();
+        }
+
+        lblNetTotal.setText(total.toString());
+
+
+    }
 
 
 }
