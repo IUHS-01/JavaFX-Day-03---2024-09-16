@@ -28,4 +28,14 @@ public class DashBordController {
             throw new RuntimeException(e);
         }
     }
+
+    public void btnPlaceOrderFromOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/place_order_from.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
