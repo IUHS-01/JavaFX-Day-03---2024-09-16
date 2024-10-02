@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.util.Duration;
+import model.Customer;
 import model.Item;
 
 import java.net.URL;
@@ -87,6 +88,10 @@ public class PlaceOrderFromController implements Initializable {
         cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newValue) -> {
             loadItemData(newValue);
         });
+        cmbCustomerId.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newValue) -> {
+            loadCustomerData(newValue);
+        });
+
 
         loadDateAndTime();
         loadCustomerIds();
@@ -138,6 +143,14 @@ public class PlaceOrderFromController implements Initializable {
         txtDescription.setText(item.getDescription());
         txtStock.setText(item.getQty().toString());
         txtUnitPrice.setText(item.getUnitPrice().toString());
+    }
+
+    private void loadCustomerData(String customerId){
+        Customer customer = new CustomerController().searchCustomer(customerId);
+
+        txtName.setText(customer.getName());
+        txtCity.setText(customer.getCity());
+        txtSalary.setText(customer.getSalary().toString());
     }
 
 

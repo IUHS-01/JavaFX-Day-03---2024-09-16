@@ -22,7 +22,23 @@ public class CustomerController implements CustomerService {
 
     @Override
     public Customer searchCustomer(String id) {
-        return null;
+        try {
+          ResultSet resultSet = CrudUtil.execute("SELECT * FROM customer WHERE CustID=?",id);
+          resultSet.next();
+          return new Customer(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getDate(4).toLocalDate(),
+                    resultSet.getDouble(5),
+                    resultSet.getString(6),
+                    resultSet.getString(7),
+                    resultSet.getString(8),
+                    resultSet.getString(9)
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
