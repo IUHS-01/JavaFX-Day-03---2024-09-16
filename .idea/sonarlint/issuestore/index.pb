@@ -37,3 +37,11 @@ O
 src/main/java/model/CartTM.java,7\c\7c60760afa680ac9920f8f9ea51eef28e5c597c6
 T
 $src/main/java/model/OrderDetail.java,1\8\186b05c0077c1820967c049d8ebcb6d6c7b702ab
+N
+src/main/java/model/Order.java,d\a\da40720aeeaaed55b9015b87ce0ba9418140ed2f
+l
+<src/main/java/controller/order/PlaceOrderFromController.java,c\7\c7d4d047e9864f2f19fb519fe4571cd52ceb30f5
+c
+3src/main/java/controller/order/OrderController.java,4\7\47486bc5f957a574b510e9d91b7bc78b53ca1151
+i
+9src/main/java/controller/order/OrderDetailController.java,2\2\226bd6a2028d4e452a0494adb3552dceb7929e9d
