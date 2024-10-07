@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import controller.customer.CustomerController;
 import controller.item.ItemController;
+import db.DBConnection;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -218,4 +219,7 @@ public class PlaceOrderFromController implements Initializable {
     }
 
 
+    public void btnCommitOnAction(ActionEvent actionEvent) throws SQLException {
+        DBConnection.getInstance().getConnection().commit();
+    }
 }
