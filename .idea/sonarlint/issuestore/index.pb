@@ -35,3 +35,5 @@ f
 6src/main/java/controller/PlaceOrderFromController.java,4\c\4cb01cbd1bb50a8fb080efbdd912f33cd439819b
 O
 src/main/java/model/CartTM.java,7\c\7c60760afa680ac9920f8f9ea51eef28e5c597c6
+T
+$src/main/java/model/OrderDetail.java,1\8\186b05c0077c1820967c049d8ebcb6d6c7b702ab

@@ -20,11 +20,14 @@ import javafx.util.Duration;
 import model.CartTM;
 import model.Customer;
 import model.Item;
+import model.OrderDetail;
 
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class PlaceOrderFromController implements Initializable {
@@ -130,6 +133,19 @@ public class PlaceOrderFromController implements Initializable {
 
     @FXML
     void btnPlaceOrderOnAction(ActionEvent event) {
+        String orderId = txtOrderId.getText();
+        String customerId = cmbCustomerId.getValue();
+        String orderDate = lblDate.getText();
+
+        List<OrderDetail> orderDetails = new ArrayList<>();
+
+        for (CartTM cartTM : cart){
+            String itemCode = cartTM.getItemCode();
+            Integer qty = cartTM.getQty();
+            orderDetails.add(new OrderDetail(orderId,itemCode,qty,0.0));
+        }
+
+
 
     }
 
