@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="601.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFromController">
+<AnchorPane prefHeight="601.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.order.PlaceOrderFromController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#273c75" height="78.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="864.0" />
       <Label layoutX="322.0" layoutY="15.0" text="Place Order From" textFill="WHITE">
