@@ -19,7 +19,7 @@ public class OrderDetailController {
     }
 
     public static boolean addOrderDetail(OrderDetail orderDetail) throws SQLException {
-       return CrudUtil.execute("INSERT INTO orderdetil VALUES(?,?,?,?)",
+       return CrudUtil.execute("INSERT INTO orderdetail VALUES(?,?,?,?)",
                 orderDetail.getOrderId(),
                 orderDetail.getItemCode(),
                 orderDetail.getQty(),

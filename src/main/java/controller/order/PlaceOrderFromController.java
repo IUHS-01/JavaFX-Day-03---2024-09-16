@@ -21,6 +21,7 @@ import javafx.util.Duration;
 import model.*;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -146,10 +147,14 @@ public class PlaceOrderFromController implements Initializable {
             orderDetails.add(new OrderDetail(orderId,itemCode,qty,0.0));
         }
 
-        if(new OrderController().placeOrder(new Order(orderId,now,customerId,orderDetails))) {
-            new Alert(Alert.AlertType.INFORMATION, "Order Placed!!").show();
-        }else{
-            new Alert(Alert.AlertType.ERROR, "Order Not Placed!!").show();
+        try {
+            if(new OrderController().placeOrder(new Order(orderId,now,customerId,orderDetails))) {
+                new Alert(Alert.AlertType.INFORMATION, "Order Placed!!").show();
+            }else{
+                new Alert(Alert.AlertType.ERROR, "Order Not Placed!!").show();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 
